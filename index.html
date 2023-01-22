@@ -11,18 +11,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Contact Form</h1>
-        <div class="flex">
-            <input class="half-width" type="text" placeholder="Your Name">
-            <input class="half-width" type="email" name="" id="" placeholder="Your Email">
+   <div class="flex container">
+    <div>
+        <h1 id="header">Contact Form</h1>
+        <div class="second-flex">
+            <input id="name" class="half-width" type="text" placeholder="Your Name">
+            <input id="email" class="half-width" type="email" name="" id="" placeholder="Your Email">
         </div>
-        <input class="full-width" type="text" placeholder="Subject">
-        <input class="full-width" type="number" name="" id="" placeholder="Phone No.">
+        <input id="subject" class="full-width" type="text" placeholder="Subject">
+        <input id="phone" class="full-width" type="number" name="" id="" placeholder="Phone No.">
         <div>
-            <textarea class="textarea" name="" id="" cols="90" rows="10" placeholder="Your Message"></textarea>
+            <textarea id="text" class="textarea" name="" id="" cols="90" rows="10" placeholder="Your Message"></textarea>
         </div>
-       <button class="btn">Send Message</button>
+       <button id="btn" class="btn">Send Message</button>
     </div>
+
+   <div>
+       <h1 class="result">Result</h1>
+       <div class="box">
+       <p id="name-handle">Name: </p>
+       <p id="email-handle">Mail: </p>
+       <p id="subject-handle">Subject: </p>
+       <p id="phone-handle">Phone No.: </p>
+       <p id="text-handle">Message: </p>
+    </div>
+    </div>
+</div>
+    <script src="app.js"></script>
 </body>
 </html>
