@@ -11,6 +11,7 @@ document.getElementById('btn').addEventListener('click', function(){
     const totalName = nameHandleInnerText + " " + yourNameValue;
 
     nameHandle.innerText = totalName;
+    yourName.value = '';
 
 
 
@@ -25,7 +26,7 @@ document.getElementById('btn').addEventListener('click', function(){
     const totalMail = mailHandleInnerText + " "+ yourMailValue;
 
     mailHandle.innerText = totalMail;
-
+    yourMail.value = '';
 
 
 
@@ -39,7 +40,7 @@ document.getElementById('btn').addEventListener('click', function(){
     const totalSubject = yourSubjectHandleInnerText + " " + yourSubjectValue;
 
     yourSubjectHandle.innerText = totalSubject;
-
+    yourSubject.value = '';
 
 
 
@@ -53,6 +54,8 @@ document.getElementById('btn').addEventListener('click', function(){
     const totalPhone = yourPhoneHandleInnerText + " " + yourPhoneValue;
 
     yourPhoneHandle.innerText=totalPhone;
+    yourPhone.value = '';
+
 
 
 
@@ -65,8 +68,31 @@ document.getElementById('btn').addEventListener('click', function(){
     const yourTextHandleInnerText = yourTextHandle.innerText;
 
     const totalText = yourTextHandleInnerText + " " + yourTextValue;
-    
-    yourTextHandle.innerText = totalText;
 
+    yourTextHandle.innerText = totalText;
+    yourText.value = '';
+
+
+    // POST section 
+
+    const subject = 'website';
+    const message = 'company.catchPhrase';
+
+    const url = 'https://jsonplaceholder.typicode.com/users'
+    fetch(url, {
+        method: 'POST',
+        body:JSON.stringify({
+            name: yourNameValue,
+            email: yourMailValue,
+            phone: yourPhoneValue,
+            subject: yourSubjectValue,
+            message: yourTextValue
+        }),
+        headers:{
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+    })
+    .then(res=>res.json())
+    .then(data=>console.log(data))
 
 })

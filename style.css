@@ -50,6 +50,7 @@ padding: 1%;
     padding: 60px;
     width: 400px;
     height: 400px;
+    overflow-x: hidden;
     text-align: justify;
 }
 
